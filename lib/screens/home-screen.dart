@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:food_app/constraints.dart';
+import 'package:food_app/components/drawer.dart';
+import 'package:food_app/screens/body.dart';
+import 'app_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -9,33 +9,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-       leading: IconButton(
-          onPressed: () {},
-          icon: SvgPicture.asset("assets/icons/menu.svg")
-      ),
-        title: RichText(
-          text: TextSpan(
-          children: [
-            TextSpan(
-                text:"Food",
-                style: TextStyle(color: kSecondaryColor),
-            ),
-          TextSpan(text:"Combine",
-              style: TextStyle(color: kPrimaryColor),
-          )
-          ],
-        ),
-        ),
-        actions: <Widget>[
-          IconButton(
-              onPressed:(){},
-              icon: SvgPicture.asset("assets/icons/notifications.svg" ),
-          )
-        ],
-    ),
+      appBar: buildAppBar(context),
+      drawer: Drawertest(),
+      body: Body(),
     );
   }
 }
