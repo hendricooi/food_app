@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/components/Foodpandainfo.dart';
+import 'package:food_app/components/offerinfo/Foodpandainfo.dart';
 
 class Foodpandaoffer extends StatelessWidget {
   @override

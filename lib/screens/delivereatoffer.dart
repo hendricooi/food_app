@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/components/deliverinfo.dart';
+import 'package:food_app/components/offerinfo/deliverinfo.dart';
 
 class delivereatoffer extends StatelessWidget {
   @override

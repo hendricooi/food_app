@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/components/Grabinfo.dart';
+import 'package:food_app/components/offerinfo/Grabinfo.dart';
 
 class Graboffer extends StatelessWidget {
   @override

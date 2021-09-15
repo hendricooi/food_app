@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/screens/contactus.dart';
-import 'package:food_app/screens/aboutus.dart';
+import 'package:food_app/screens/drawer/contactus.dart';
+import 'package:food_app/screens/drawer/aboutus.dart';
 
 class Drawertest extends StatelessWidget {
   @override

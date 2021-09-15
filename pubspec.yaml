@@ -31,7 +31,7 @@ dependencies:
   flutter_svg: ^0.22.0
   contactus: ^1.2.0
   google_fonts: ^2.1.0
-  smooth_star_rating: ^1.0.4
+  smooth_star_rating: ^1.1.1
 
 dev_dependencies:
   flutter_test:
