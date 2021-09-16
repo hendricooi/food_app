@@ -5,9 +5,9 @@ class Localfood extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.teal[100],
       appBar: AppBar(
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.teal[100],
         automaticallyImplyLeading: true,
         elevation: 0,
       ),
@@ -32,7 +32,7 @@ class Body extends StatelessWidget {
             children: [
               Container(
                   decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.grey[100],
               )),
               SingleChildScrollView(
                 child: Column(
@@ -49,15 +49,12 @@ class Body extends StatelessWidget {
                                   fontWeight: FontWeight.bold))),
                     ),
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
                       height: 150,
+                      width: double.infinity,
                       decoration: BoxDecoration(
-                        border: Border(
-                            top: BorderSide(
-                                color: Colors.black.withOpacity(0.32)),
-                            bottom: BorderSide(
-                                color: Colors.black.withOpacity(0.32))),
-                      ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)),
                       child: Row(
                         children: [
                           Container(
@@ -76,22 +73,58 @@ class Body extends StatelessWidget {
                                   style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 13,
+                                          fontSize: 18,
                                           fontWeight: FontWeight.bold))),
-                              Text("-Local Food    -Koay Teow   -Soup    ",
+                              Text("-Local Food    -Koay Teow   -Soup",
                                   style: GoogleFonts.montserrat(
                                       textStyle: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.grey,
                                     fontSize: 12,
                                   ))),
-                              Text(
-                                "Delivery Hours: 9.45am - 9.15pm",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 12,
-                                )),
-                                textAlign: TextAlign.left,
+                              Row(
+                                children: <Widget>[
+                                  Text("Delivery Hours:",
+                                      style: GoogleFonts.montserrat(
+                                          textStyle: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 12,
+                                      ))),
+                                  Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 5),
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      color: Colors.greenAccent,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("9.45am",
+                                        style: GoogleFonts.montserrat(
+                                            textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 12,
+                                        ))),
+                                  ),
+                                  Text("-",
+                                      style: GoogleFonts.montserrat(
+                                          textStyle: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 12))),
+                                  Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 5),
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      color: Colors.greenAccent,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("9.15pm",
+                                        style: GoogleFonts.montserrat(
+                                            textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 12,
+                                        ))),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -99,13 +132,12 @@ class Body extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
                       height: 150,
+                      width: double.infinity,
                       decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Colors.black.withOpacity(0.32))),
-                      ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)),
                       child: Row(
                         children: [
                           Container(
@@ -120,26 +152,62 @@ class Body extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text("Kim Poh Roasted Chicken & Duck Rice",
+                              Text("Kim Poh Roasted Chicken &\nDuck Rice",
                                   style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 13,
+                                          fontSize: 18,
                                           fontWeight: FontWeight.bold))),
-                              Text("-Local Food    -Rice   -Chinese",
+                              Text("-Local Food    -Rice     - Chicken",
                                   style: GoogleFonts.montserrat(
                                       textStyle: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.grey,
                                     fontSize: 12,
                                   ))),
-                              Text(
-                                "Delivery Hours: 9am - 9.45pm",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 12,
-                                )),
-                                textAlign: TextAlign.left,
+                              Row(
+                                children: <Widget>[
+                                  Text("Delivery Hours:",
+                                      style: GoogleFonts.montserrat(
+                                          textStyle: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 12,
+                                      ))),
+                                  Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 5),
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      color: Colors.greenAccent,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("9.30am",
+                                        style: GoogleFonts.montserrat(
+                                            textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 12,
+                                        ))),
+                                  ),
+                                  Text("-",
+                                      style: GoogleFonts.montserrat(
+                                          textStyle: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 12))),
+                                  Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 5),
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      color: Colors.greenAccent,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("9.15pm",
+                                        style: GoogleFonts.montserrat(
+                                            textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 12,
+                                        ))),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
@@ -147,13 +215,12 @@ class Body extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
                       height: 150,
+                      width: double.infinity,
                       decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Colors.black.withOpacity(0.32))),
-                      ),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)),
                       child: Row(
                         children: [
                           Container(
@@ -172,22 +239,58 @@ class Body extends StatelessWidget {
                                   style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
                                           color: Colors.black,
-                                          fontSize: 13,
+                                          fontSize: 18,
                                           fontWeight: FontWeight.bold))),
-                              Text("-Halal    -Malaysian Food   -Mamak",
+                              Text("-Mamak    -Local Food    -Halal",
                                   style: GoogleFonts.montserrat(
                                       textStyle: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.grey,
                                     fontSize: 12,
                                   ))),
-                              Text(
-                                "Delivery Hours: 11am - 9.30pm",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 12,
-                                )),
-                                textAlign: TextAlign.left,
+                              Row(
+                                children: <Widget>[
+                                  Text("Delivery Hours:",
+                                      style: GoogleFonts.montserrat(
+                                          textStyle: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 12,
+                                      ))),
+                                  Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 5),
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      color: Colors.greenAccent,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("11.00am",
+                                        style: GoogleFonts.montserrat(
+                                            textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 12,
+                                        ))),
+                                  ),
+                                  Text("-",
+                                      style: GoogleFonts.montserrat(
+                                          textStyle: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 12))),
+                                  Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 5),
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      color: Colors.greenAccent,
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text("9.30pm",
+                                        style: GoogleFonts.montserrat(
+                                            textStyle: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 12,
+                                        ))),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
