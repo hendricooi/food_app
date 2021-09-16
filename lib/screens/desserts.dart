@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/components/rating.dart';
 import 'package:food_app/constraints.dart';
 import 'package:food_app/screens/body.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -85,6 +86,15 @@ class Body extends StatelessWidget {
                                   ))),
                               Row(
                                 children: <Widget>[
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/starhalf.png"),
+                                ],
+                              ),
+                              Row(
+                                children: <Widget>[
                                   Text("Delivery Hours:",
                                       style: GoogleFonts.montserrat(
                                           textStyle: TextStyle(
@@ -168,6 +178,15 @@ class Body extends StatelessWidget {
                                   ))),
                               Row(
                                 children: <Widget>[
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/starhalf.png"),
+                                ],
+                              ),
+                              Row(
+                                children: <Widget>[
                                   Text("Delivery Hours:",
                                       style: GoogleFonts.montserrat(
                                           textStyle: TextStyle(
@@ -249,6 +268,15 @@ class Body extends StatelessWidget {
                                     color: Colors.grey,
                                     fontSize: 12,
                                   ))),
+                              Row(
+                                children: <Widget>[
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                  rating("assets/icons/star.png"),
+                                ],
+                              ),
                               Row(
                                 children: <Widget>[
                                   Text("Delivery Hours:",
