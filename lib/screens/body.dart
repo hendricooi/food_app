@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/components/foodoption.dart';
 import 'package:food_app/components/search.dart';
-import 'package:food_app/screens/delivereatoffer.dart';
+import 'package:food_app/screens/Offer/delivereatoffer.dart';
 import 'package:food_app/screens/desserts.dart';
 import 'package:food_app/screens/drinks.dart';
 import 'package:food_app/screens/fastfood.dart';
-import 'package:food_app/screens/foodpandaoffer.dart';
-import 'package:food_app/screens/graboffer.dart';
+import 'package:food_app/screens/Offer/foodpandaoffer.dart';
+import 'package:food_app/screens/Offer/graboffer.dart';
 import 'package:food_app/screens/localfood.dart';
 import 'package:google_fonts/google_fonts.dart';
 

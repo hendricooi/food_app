@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/components/rating.dart';
-import 'package:food_app/constraints.dart';
-import 'package:food_app/screens/body.dart';
+import 'package:food_app/screens/Restaurant/DrinksRes/Coffeebean.dart';
+import 'package:food_app/screens/Restaurant/DrinksRes/Starbucks.dart';
+import 'package:food_app/screens/Restaurant/DrinksRes/Tealive.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Drinks extends StatelessWidget {
@@ -51,280 +52,310 @@ class Body extends StatelessWidget {
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold))),
                     ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
-                      height: 150,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.symmetric(horizontal: 10),
-                            height: 120,
-                            width: 120,
-                            child: Image.asset(
-                              "assets/images/tealive.png",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Tealive()),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
+                        height: 150,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.symmetric(horizontal: 10),
+                              height: 120,
+                              width: 120,
+                              child: Image.asset(
+                                "assets/images/tealive.png",
+                              ),
                             ),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text("Tealive",
-                                  style: GoogleFonts.roboto(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold))),
-                              Text("-Beverages    -Halal    -Milk Tea",
-                                  style: GoogleFonts.montserrat(
-                                      textStyle: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 12,
-                                  ))),
-                              Row(
-                                children: <Widget>[
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/starhalf.png"),
-                                ],
-                              ),
-                              Row(
-                                children: <Widget>[
-                                  Text("Delivery Hours:",
-                                      style: GoogleFonts.montserrat(
-                                          textStyle: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 12,
-                                      ))),
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 5),
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      color: Colors.greenAccent,
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    alignment: Alignment.center,
-                                    child: Text("9.30am",
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text("Tealive",
+                                    style: GoogleFonts.roboto(
+                                        textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold))),
+                                Text("-Beverages    -Halal    -Milk Tea",
+                                    style: GoogleFonts.montserrat(
+                                        textStyle: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12,
+                                    ))),
+                                Row(
+                                  children: <Widget>[
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/starhalf.png"),
+                                  ],
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    Text("Delivery Hours:",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                           color: Colors.black,
                                           fontSize: 12,
                                         ))),
-                                  ),
-                                  Text("-",
-                                      style: GoogleFonts.montserrat(
-                                          textStyle: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 12))),
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 5),
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      color: Colors.greenAccent,
-                                      borderRadius: BorderRadius.circular(10),
+                                    Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 5),
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        color: Colors.greenAccent,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Text("9.30am",
+                                          style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                          ))),
                                     ),
-                                    alignment: Alignment.center,
-                                    child: Text("9.15pm",
+                                    Text("-",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 12,
-                                        ))),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
+                                                color: Colors.black,
+                                                fontSize: 12))),
+                                    Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 5),
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        color: Colors.greenAccent,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Text("9.15pm",
+                                          style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                          ))),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
-                      height: 150,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.symmetric(horizontal: 10),
-                            height: 120,
-                            width: 120,
-                            child: Image.asset(
-                              "assets/images/coffee.png",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Coffeebean()),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
+                        height: 150,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.symmetric(horizontal: 10),
+                              height: 120,
+                              width: 120,
+                              child: Image.asset(
+                                "assets/images/coffee.png",
+                              ),
                             ),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text("The Coffe Bean & \nTea Leaf",
-                                  style: GoogleFonts.roboto(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold))),
-                              Text("-Beverages    -Coffee    -Tea",
-                                  style: GoogleFonts.montserrat(
-                                      textStyle: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 12,
-                                  ))),
-                              Row(
-                                children: <Widget>[
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/starhalf.png"),
-                                ],
-                              ),
-                              Row(
-                                children: <Widget>[
-                                  Text("Delivery Hours:",
-                                      style: GoogleFonts.montserrat(
-                                          textStyle: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 12,
-                                      ))),
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 5),
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      color: Colors.greenAccent,
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    alignment: Alignment.center,
-                                    child: Text("9.30am",
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text("The Coffe Bean & \nTea Leaf",
+                                    style: GoogleFonts.roboto(
+                                        textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold))),
+                                Text("-Beverages    -Coffee    -Tea",
+                                    style: GoogleFonts.montserrat(
+                                        textStyle: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12,
+                                    ))),
+                                Row(
+                                  children: <Widget>[
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/starhalf.png"),
+                                  ],
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    Text("Delivery Hours:",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                           color: Colors.black,
                                           fontSize: 12,
                                         ))),
-                                  ),
-                                  Text("-",
-                                      style: GoogleFonts.montserrat(
-                                          textStyle: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 12))),
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 5),
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      color: Colors.greenAccent,
-                                      borderRadius: BorderRadius.circular(10),
+                                    Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 5),
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        color: Colors.greenAccent,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Text("9.30am",
+                                          style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                          ))),
                                     ),
-                                    alignment: Alignment.center,
-                                    child: Text("9.15pm",
+                                    Text("-",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 12,
-                                        ))),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
+                                                color: Colors.black,
+                                                fontSize: 12))),
+                                    Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 5),
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        color: Colors.greenAccent,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Text("9.15pm",
+                                          style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                          ))),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
-                      height: 150,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.symmetric(horizontal: 10),
-                            height: 120,
-                            width: 120,
-                            child: Image.asset(
-                              "assets/images/starbucks.png",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Starbucks()),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(20.0, 5.0, 20.0, 5.0),
+                        height: 150,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.symmetric(horizontal: 10),
+                              height: 120,
+                              width: 120,
+                              child: Image.asset(
+                                "assets/images/starbucks.png",
+                              ),
                             ),
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text("Starbucks Malaysia",
-                                  style: GoogleFonts.roboto(
-                                      textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold))),
-                              Text("-Beverages    -Coffee    -Tea",
-                                  style: GoogleFonts.montserrat(
-                                      textStyle: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 12,
-                                  ))),
-                              Row(
-                                children: <Widget>[
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/star.png"),
-                                  rating("assets/icons/starhalf.png"),
-                                ],
-                              ),
-                              Row(
-                                children: <Widget>[
-                                  Text("Delivery Hours:",
-                                      style: GoogleFonts.montserrat(
-                                          textStyle: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 12,
-                                      ))),
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 5),
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      color: Colors.greenAccent,
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    alignment: Alignment.center,
-                                    child: Text("8.15am",
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Text("Starbucks Malaysia",
+                                    style: GoogleFonts.roboto(
+                                        textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold))),
+                                Text("-Beverages    -Coffee    -Tea",
+                                    style: GoogleFonts.montserrat(
+                                        textStyle: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12,
+                                    ))),
+                                Row(
+                                  children: <Widget>[
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/star.png"),
+                                    rating("assets/icons/starhalf.png"),
+                                  ],
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    Text("Delivery Hours:",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                           color: Colors.black,
                                           fontSize: 12,
                                         ))),
-                                  ),
-                                  Text("-",
-                                      style: GoogleFonts.montserrat(
-                                          textStyle: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 12))),
-                                  Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 5),
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      color: Colors.greenAccent,
-                                      borderRadius: BorderRadius.circular(10),
+                                    Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 5),
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        color: Colors.greenAccent,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Text("8.15am",
+                                          style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                          ))),
                                     ),
-                                    alignment: Alignment.center,
-                                    child: Text("9.30pm",
+                                    Text("-",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 12,
-                                        ))),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ],
+                                                color: Colors.black,
+                                                fontSize: 12))),
+                                    Container(
+                                      margin:
+                                          EdgeInsets.symmetric(horizontal: 5),
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                        color: Colors.greenAccent,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Text("9.30pm",
+                                          style: GoogleFonts.montserrat(
+                                              textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 12,
+                                          ))),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
