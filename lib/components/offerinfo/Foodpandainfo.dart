@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/components/offerdetails.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Foodpandainfo extends StatelessWidget {
   @override

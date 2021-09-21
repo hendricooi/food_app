@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../constraints.dart';
@@ -11,19 +12,19 @@ AppBar buildAppBar(BuildContext context) {
     centerTitle: true,
     title: RichText(
       text: TextSpan(
-        style: Theme.of(context)
-            .textTheme
-            .title!
-            .copyWith(fontWeight: FontWeight.bold),
         children: [
           TextSpan(
               text: "Food",
               style: TextStyle(
                 color: kSecondaryColor,
+                fontWeight: FontWeight.bold,
               )),
           TextSpan(
             text: "Combine",
-            style: TextStyle(color: kPrimaryColor),
+            style: TextStyle(
+              color: kPrimaryColor,
+              fontWeight: FontWeight.bold,
+            ),
           )
         ],
       ),

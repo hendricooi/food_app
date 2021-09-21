@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/drawer/contactus.dart';
 import 'package:food_app/screens/drawer/aboutus.dart';
+import 'package:food_app/services/auth_services.dart';
+import 'package:provider/provider.dart';
 
 class Drawertest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final authService = Provider.of<AuthService>(context);
     return Drawer(
         child: ListView(children: [
       ListTile(
@@ -31,6 +34,15 @@ class Drawertest extends StatelessWidget {
             context,
             MaterialPageRoute(builder: (context) => Aboutus()),
           );
+        },
+      ),
+      ListTile(
+        title: const Text('Log Out'),
+        onTap: () async {
+          // Update the state of the app
+          // ...
+          // Then close the drawer
+          await authService.signOut();
         },
       ),
     ]));

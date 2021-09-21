@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/constraints.dart';
 
 class Foodoption extends StatelessWidget {
   String image, text;
