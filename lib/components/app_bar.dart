@@ -2,12 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:food_app/components/drawer.dart';
 
 import '../constraints.dart';
 
 AppBar buildAppBar(BuildContext context) {
   return AppBar(
-    backgroundColor: Colors.white,
+    iconTheme: IconThemeData(color: Colors.black),
+    backgroundColor: Colors.transparent,
     elevation: 0,
     centerTitle: true,
     title: RichText(

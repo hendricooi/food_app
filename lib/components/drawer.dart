@@ -37,11 +37,8 @@ class Drawertest extends StatelessWidget {
         },
       ),
       ListTile(
-        title: const Text('Log Out'),
+        title: const Text('Sign Out'),
         onTap: () async {
-          // Update the state of the app
-          // ...
-          // Then close the drawer
           await authService.signOut();
         },
       ),
