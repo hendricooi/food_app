@@ -21,12 +21,17 @@ class HomeScreen extends StatelessWidget {
           children: [
             Container(
                 height: 30,
-                child: Text('Welcome, User',
-                    style: GoogleFonts.montserrat(
-                        textStyle: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                    )))),
+                child: Row(
+                  children: [
+                    Icon(Icons.person),
+                    Text('Welcome, User',
+                        style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                        ))),
+                  ],
+                )),
             GestureDetector(
               onTap: () async {
                 await authService.signOut();
