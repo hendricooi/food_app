@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/components/foodoption.dart';
-import 'package:food_app/components/search.dart';
 import 'package:food_app/screens/Offer/delivereatoffer.dart';
 import 'package:food_app/screens/desserts.dart';
 import 'package:food_app/screens/drinks.dart';
@@ -19,9 +18,9 @@ class Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            search(
-              onChanged: (value) {},
-            ),
+            // search(
+            //   onChanged: (value) {},
+            // ),
             Container(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Text("Categories",

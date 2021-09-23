@@ -23,7 +23,8 @@ class search extends StatelessWidget {
         onChanged: onChanged,
         decoration: InputDecoration(
           border: InputBorder.none,
-          icon: Icon(Icons.search, color: Colors.black),
+          icon: IconButton(
+              icon: Icon(Icons.search, color: Colors.black), onPressed: () {}),
           hintText: "Search Here",
           hintStyle: TextStyle(color: kSecondaryColor),
         ),
