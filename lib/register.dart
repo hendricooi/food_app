@@ -138,6 +138,9 @@ class _RegisterState extends State<Register> {
                           try {
                             await authService.registerWithEmailAndPassword(
                                 emailController.text, passwordController.text);
+                            Fluttertoast.showToast(
+                                msg: "Account has been created.");
+                            Navigator.of(context).pop();
                           } on FirebaseAuthException catch (error) {
                             Fluttertoast.showToast(
                                 msg: error.code, gravity: ToastGravity.TOP);

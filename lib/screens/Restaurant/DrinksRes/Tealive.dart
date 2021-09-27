@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/button_builder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:food_app/constraints.dart';
 import 'package:food_app/screens/body.dart';
+import 'package:food_app/screens/fooditems/mt01.dart';
+import 'package:food_app/screens/fooditems/mt02.dart';
+import 'package:food_app/screens/fooditems/mt03.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Tealive extends StatelessWidget {
@@ -94,8 +98,7 @@ class Tealive extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
-                          alignment: Alignment.centerLeft,
+                          margin: EdgeInsets.only(top: 10),
                           height: 150,
                           width: 250,
                           child: Column(
@@ -116,6 +119,17 @@ class Tealive extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MT01()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -128,7 +142,7 @@ class Tealive extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
                     height: 150,
                     decoration: BoxDecoration(
                       border: Border(
@@ -160,6 +174,17 @@ class Tealive extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MT02()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -182,7 +207,7 @@ class Tealive extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
+                          margin: EdgeInsets.only(top: 10),
                           alignment: Alignment.centerLeft,
                           height: 150,
                           width: 250,
@@ -204,6 +229,17 @@ class Tealive extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MT03()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),

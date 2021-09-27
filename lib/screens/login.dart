@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_builder.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_app/constraints.dart';
+import 'package:food_app/screens/ForgetPassword.dart';
 import 'package:food_app/services/auth_services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -146,6 +147,18 @@ class _LoginState extends State<Login> {
                       }),
                 ),
               ],
+            ),
+            FlatButton(
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  ForgotPassword.id,
+                );
+              },
+              child: Text(
+                'Forgot Password?',
+                style: TextStyle(color: Colors.blue[200], fontSize: 12),
+              ),
             ),
           ],
         ),

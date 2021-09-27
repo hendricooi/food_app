@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/fooditems/double.dart';
+import 'package:food_app/screens/fooditems/handpacked.dart';
+import 'package:food_app/screens/fooditems/single.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Baskin extends StatelessWidget {
@@ -94,7 +97,7 @@ class Baskin extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
+                          margin: EdgeInsets.only(top: 10),
                           alignment: Alignment.centerLeft,
                           height: 150,
                           width: 250,
@@ -116,6 +119,17 @@ class Baskin extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => HandPacked()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -138,7 +152,7 @@ class Baskin extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
+                          margin: EdgeInsets.only(top: 10),
                           alignment: Alignment.centerLeft,
                           height: 150,
                           width: 250,
@@ -160,6 +174,17 @@ class Baskin extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Double()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -182,7 +207,7 @@ class Baskin extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
+                          margin: EdgeInsets.only(top: 10),
                           alignment: Alignment.centerLeft,
                           height: 150,
                           width: 250,
@@ -204,6 +229,17 @@ class Baskin extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Single()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),

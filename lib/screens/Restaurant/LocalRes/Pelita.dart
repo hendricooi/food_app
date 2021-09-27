@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/fooditems/bawang.dart';
+import 'package:food_app/screens/fooditems/canai.dart';
+import 'package:food_app/screens/fooditems/telur.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Pelita extends StatelessWidget {
@@ -111,12 +114,17 @@ class Pelita extends StatelessWidget {
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              Text(
-                                "",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                        color: Colors.black, fontSize: 12)),
-                              ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Canai()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -155,12 +163,17 @@ class Pelita extends StatelessWidget {
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              Text(
-                                "",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                        color: Colors.black, fontSize: 12)),
-                              ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Bawang()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -199,12 +212,17 @@ class Pelita extends StatelessWidget {
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              Text(
-                                "",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                        color: Colors.black, fontSize: 12)),
-                              ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Telur()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),

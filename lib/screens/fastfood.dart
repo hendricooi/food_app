@@ -14,6 +14,7 @@ class Fastfood extends StatelessWidget {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: AppBar(
+        backgroundColor: kPrimaryColor,
         automaticallyImplyLeading: true,
         elevation: 0,
       ),

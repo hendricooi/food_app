@@ -3,6 +3,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/constraints.dart';
 import 'package:food_app/register.dart';
+import 'package:food_app/screens/ConfirmEmail.dart';
+import 'package:food_app/screens/ForgetPassword.dart';
 import 'package:food_app/screens/login.dart';
 import 'package:food_app/screens/wrapper.dart';
 import 'package:food_app/services/auth_services.dart';
@@ -38,6 +40,10 @@ class MyApp extends StatelessWidget {
           '/': (context) => Wrapper(),
           '/login': (context) => Login(),
           '/register': (context) => Register(),
+          ForgotPassword.id: (context) => ForgotPassword(),
+          ConfirmEmail.id: (context) => ConfirmEmail(
+              message:
+                  'An email has just been sent to you, Click the link provided to complete registration'),
         },
       ),
     );

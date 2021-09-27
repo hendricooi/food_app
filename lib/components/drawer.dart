@@ -36,12 +36,6 @@ class Drawertest extends StatelessWidget {
           );
         },
       ),
-      ListTile(
-        title: const Text('Sign Out'),
-        onTap: () async {
-          await authService.signOut();
-        },
-      ),
     ]));
   }
 }

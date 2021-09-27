@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:food_app/User.dart';
 import 'package:food_app/services/database.dart';
@@ -18,7 +19,6 @@ class AuthService {
     try {
       final credential = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
-
       return _userfromFirebase(credential.user);
     } catch (error) {
       print(error.toString());

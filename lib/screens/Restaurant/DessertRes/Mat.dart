@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/fooditems/lemonjelly.dart';
+import 'package:food_app/screens/fooditems/milky.dart';
+import 'package:food_app/screens/fooditems/mix.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Mat extends StatelessWidget {
@@ -94,7 +97,7 @@ class Mat extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
+                          margin: EdgeInsets.only(top: 10),
                           alignment: Alignment.centerLeft,
                           height: 150,
                           width: 250,
@@ -116,6 +119,17 @@ class Mat extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Mix()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -138,7 +152,7 @@ class Mat extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
+                          margin: EdgeInsets.only(top: 10),
                           alignment: Alignment.centerLeft,
                           height: 150,
                           width: 250,
@@ -160,6 +174,17 @@ class Mat extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Milky()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -182,7 +207,7 @@ class Mat extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
+                          margin: EdgeInsets.only(top: 10),
                           alignment: Alignment.centerLeft,
                           height: 150,
                           width: 250,
@@ -204,6 +229,17 @@ class Mat extends StatelessWidget {
                                     textStyle: TextStyle(
                                         color: Colors.black, fontSize: 12)),
                               ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LemonJelly()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),

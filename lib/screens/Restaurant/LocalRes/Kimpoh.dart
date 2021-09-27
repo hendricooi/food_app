@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/fooditems/chicken.dart';
+import 'package:food_app/screens/fooditems/sausage.dart';
+import 'package:food_app/screens/fooditems/wing.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Kimpoh extends StatelessWidget {
@@ -111,12 +114,17 @@ class Kimpoh extends StatelessWidget {
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              Text(
-                                "",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                        color: Colors.black, fontSize: 12)),
-                              ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Chicken()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -155,12 +163,17 @@ class Kimpoh extends StatelessWidget {
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              Text(
-                                "",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                        color: Colors.black, fontSize: 12)),
-                              ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Wing()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
@@ -199,12 +212,17 @@ class Kimpoh extends StatelessWidget {
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
                               ),
-                              Text(
-                                "",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                        color: Colors.black, fontSize: 12)),
-                              ),
+                              TextButton.icon(
+                                icon: Icon(Icons.price_check),
+                                label: Text('Check Price'),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Sausage()),
+                                  );
+                                },
+                              )
                             ],
                           ),
                         ),
