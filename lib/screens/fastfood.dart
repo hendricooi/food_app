@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_app/components/rating.dart';
 import 'package:food_app/constraints.dart';
 import 'package:food_app/screens/Restaurant/FastFoodRes/Dominos.dart';
 import 'package:food_app/screens/Restaurant/FastFoodRes/Kfc.dart';
 import 'package:food_app/screens/Restaurant/FastFoodRes/Mcd.dart';
-import 'package:food_app/screens/body.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Fastfood extends StatelessWidget {

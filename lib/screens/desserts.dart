@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/components/rating.dart';
-import 'package:food_app/constraints.dart';
 import 'package:food_app/screens/Restaurant/DessertRes/Baskin.dart';
 import 'package:food_app/screens/Restaurant/DessertRes/Blackball.dart';
 import 'package:food_app/screens/Restaurant/DessertRes/Mat.dart';
-import 'package:food_app/screens/body.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Desserts extends StatelessWidget {

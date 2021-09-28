@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final authService = Provider.of<AuthService>(context);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: buildAppBar(context),
       drawer: Drawertest(),
       body: Body(),

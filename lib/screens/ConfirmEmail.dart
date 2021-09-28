@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/screens/login.dart';
 
 class ConfirmEmail extends StatelessWidget {
   static String id = 'confirm-email';

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/components/foodoption.dart';
 import 'package:food_app/screens/Offer/delivereatoffer.dart';
+import 'package:food_app/screens/Restaurant/DrinksRes/Starbucks.dart';
+import 'package:food_app/screens/Restaurant/FastFoodRes/Mcd.dart';
 import 'package:food_app/screens/desserts.dart';
 import 'package:food_app/screens/drinks.dart';
 import 'package:food_app/screens/fastfood.dart';
@@ -173,6 +175,151 @@ class Body extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            Align(
+                alignment: Alignment.topLeft,
+                child: Text("Top Rated",
+                    style: GoogleFonts.montserrat(
+                        textStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    )))),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Starbucks()),
+                );
+              },
+              child: Stack(children: [
+                Container(
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                    width: MediaQuery.of(context).size.width,
+                    height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/starbucks2.jpg"),
+                          fit: BoxFit.fill),
+                    )),
+                Positioned(
+                  top: 15,
+                  right: 10,
+                  child: Container(
+                      width: 60,
+                      height: 30,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "30mins",
+                          style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      )),
+                )
+              ]),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Starbucks",
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    )),
+                Text("[-Beverage,   Tea,   Coffee]",
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: 11,
+                      ),
+                    )),
+                Text("0.1km -  RM2.99 delivery fee",
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: 11,
+                      ),
+                    )),
+              ],
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Mcd()),
+                );
+              },
+              child: Stack(children: [
+                Container(
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                    width: MediaQuery.of(context).size.width,
+                    height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/mcd2.jpg"),
+                          fit: BoxFit.fill),
+                    )),
+                Positioned(
+                  top: 15,
+                  right: 10,
+                  child: Container(
+                      width: 60,
+                      height: 30,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(5)),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          "30mins",
+                          style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      )),
+                )
+              ]),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("McDonald's",
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    )),
+                Text("[-Burger,   Halal,   Fries]",
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: 11,
+                      ),
+                    )),
+                Text("1.0km -  RM1.99 delivery fee",
+                    style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: 11,
+                      ),
+                    )),
+              ],
             ),
           ],
         ),
