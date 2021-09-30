@@ -10,8 +10,54 @@ import 'package:food_app/screens/Offer/foodpandaoffer.dart';
 import 'package:food_app/screens/Offer/graboffer.dart';
 import 'package:food_app/screens/localfood.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:geocoding/geocoding.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
+  @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
+  String location = '';
+  String Address = 'Press Button for location';
+
+  Future<Position> _getGeoLocationPosition() async {
+    bool serviceEnabled;
+    LocationPermission permission;
+    // Test if location services are enabled.
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      await Geolocator.openLocationSettings();
+      return Future.error('Location services are disabled.');
+    }
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        return Future.error('Location permissions are denied');
+      }
+    }
+    if (permission == LocationPermission.deniedForever) {
+      // Permissions are denied forever, handle appropriately.
+      return Future.error(
+          'Location permissions are permanently denied, we cannot request permissions.');
+    }
+
+    return await Geolocator.getCurrentPosition();
+    // desiredAccuracy: LocationAccuracy.high);
+  }
+
+  Future<void> GetAddressFromLatLong(Position position) async {
+    List<Placemark> placemark =
+        await placemarkFromCoordinates(position.latitude, position.longitude);
+    print(placemark);
+    Placemark place = placemark[0];
+
+    Address = '${place.street}, ${place.postalCode}, ${place.country}';
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -20,6 +66,37 @@ class Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text("Delivering to -",
+                        style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 12,
+                        ))),
+                    Text('$Address',
+                        style: GoogleFonts.montserrat(
+                            textStyle: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 11,
+                        ))),
+                  ],
+                ),
+                FlatButton(
+                    onPressed: () async {
+                      Position position = await _getGeoLocationPosition();
+                      print(position.latitude);
+                      print(position.longitude);
+                      GetAddressFromLatLong(position);
+                    },
+                    child: Text("Get Location"))
+              ],
+            ),
             // search(
             //   onChanged: (value) {},
             // ),
