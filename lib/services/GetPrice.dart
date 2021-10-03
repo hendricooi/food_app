@@ -98,45 +98,65 @@ class GetPrice extends StatelessWidget {
 
                 return Column(
                   children: [
-                    Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.only(top: 10),
-                          alignment: Alignment.centerLeft,
-                          height: 150,
-                          width: 250,
-                          child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 10),
+                      height: 150,
+                      decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Colors.black.withOpacity(0.10))),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 130,
+                            child: Image.asset(image,
+                                height: 150, fit: BoxFit.fill),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 10),
+                            alignment: Alignment.centerLeft,
+                            height: 150,
+                            width: 250,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Container(
-                                  height: 130,
-                                  child: Image.asset(image,
-                                      height: 150, fit: BoxFit.fill),
-                                )
-                              ]),
-                        ),
-                        Column(
-                          children: [
-                            Text(
-                              "Order From",
-                              style: GoogleFonts.montserrat(
-                                  textStyle: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold)),
-                            ),
-                            Container(
-                                height: 50,
-                                child: Text('RM $first ',
+                                  margin: const EdgeInsets.only(left: 20),
+                                  child: Text(
+                                    "Price from",
                                     style: GoogleFonts.montserrat(
                                         textStyle: TextStyle(
                                       color: Colors.black,
-                                      fontSize: 20,
-                                    )))),
-                          ],
-                        ),
-                      ],
+                                      fontSize: 15,
+                                    )),
+                                  ),
+                                ),
+                                Container(
+                                  margin: const EdgeInsets.only(left: 20),
+                                  child: Text(
+                                    "RM $first",
+                                    style: GoogleFonts.montserrat(
+                                        textStyle: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold)),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(left: 20),
+                                  child: TextButton.icon(
+                                    icon: Icon(Icons.favorite_border_outlined),
+                                    label: Text('Add to favourites'),
+                                    onPressed: () {},
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     Row(
                       children: [
