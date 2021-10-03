@@ -16,31 +16,6 @@ class _GCBState extends State<GCB> {
         appBar: AppBar(
           title: Text("GCB"),
         ),
-        body: GetPrice()
-        //  Center(
-        //   child: StreamBuilder(
-        //     stream: FirebaseFirestore.instance.collection('food').snapshots(),
-        //     builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
-        //       if (!snapshot.hasData) {
-        //         return Center(child: Text("Loading"));
-        //       }
-        //       return ListView(
-        //         children: snapshot.data!.docs.map((food) {
-        //           return Column(
-        //             children: [
-        //               ListTile(
-        //                 title: Text(food['price']),
-        //               ),
-        //               ListTile(
-        //                 title: Text(food['grabprice']),
-        //               )
-        //             ],
-        //           );
-        //         }).toList(),
-        //       );
-        //     },
-        //   ),
-        // ),
-        );
+        body: GetPrice(0, "grabGCB", "foodpandaGCB", "deliverGCB"));
   }
 }
