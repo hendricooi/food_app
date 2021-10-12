@@ -45,22 +45,25 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-          Column(
-            children: [
-              // Container(
-              //   margin: EdgeInsets.only(top: 80),
-              //   alignment: Alignment.center,
-              //   child: Text(
-              //     "GCB\n(McDonald's Malaysia)",
-              //     style: GoogleFonts.roboto(
-              //       textStyle: TextStyle(
-              //           color: Colors.black,
-              //           fontSize: 20,
-              //           fontWeight: FontWeight.bold),
-              //     ),
-              //   ),
-              // ),
-            ],
+          Container(
+            width: double.infinity,
+            height: 210,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30)),
+              image: DecorationImage(
+                  colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(0.6), BlendMode.dstATop),
+                  image: AssetImage("assets/images/watermark.PNG")),
+            ),
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)),
+              ),
+            ),
           ),
         ]),
         Container(

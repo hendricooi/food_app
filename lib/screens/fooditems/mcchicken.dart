@@ -23,25 +23,47 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            height: 210,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30)),
-              image: DecorationImage(
-                  image: AssetImage("assets/images/mcjiken.jpg")),
-            ),
-            child: DecoratedBox(
+        children: <Widget>[
+          Stack(children: [
+            Container(
+              width: double.infinity,
+              height: 210,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30)),
+                image: DecorationImage(
+                    image: AssetImage("assets/images/mcjiken.jpg")),
+              ),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30)),
+                ),
               ),
             ),
-          ),
+            Container(
+              width: double.infinity,
+              height: 210,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)),
+                image: DecorationImage(
+                    colorFilter: ColorFilter.mode(
+                        Colors.black.withOpacity(0.6), BlendMode.dstATop),
+                    image: AssetImage("assets/images/watermark.PNG")),
+              ),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30)),
+                ),
+              ),
+            ),
+          ]),
           GetPrice(1, "grabMcC", "pandaMcC", "deliverMcC", "grabdeli",
               "pandadeli", "eatdeli"),
         ],

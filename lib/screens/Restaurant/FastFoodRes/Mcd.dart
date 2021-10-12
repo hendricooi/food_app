@@ -62,9 +62,9 @@ class Mcd extends StatelessWidget {
                           "Burgers, fries, nuggets or just a drink. Good food, great time. 100% HALAL Certified.",
                           style: GoogleFonts.montserrat(
                               textStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 12,
-                          )),
+                                  color: Colors.black,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold)),
                           textAlign: TextAlign.center,
                         ),
                       )

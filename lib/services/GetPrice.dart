@@ -58,120 +58,120 @@ class GetPrice extends StatelessWidget {
                       if (value3 == 0) {
                         first = value2.toString();
                         image = "assets/images/foodpanda1.png";
-                        delivery = delivalue2.toString();
-                        second = value.toString();
+                        delivery = delivalue2.toStringAsFixed(2);
+                        second = value.toStringAsFixed(2);
                         image2 = "assets/images/grabfood.jpg";
-                        delivery2 = delivalue.toString();
-                        third = value3.toString();
-                        delivery3 = delivalue3.toString();
+                        delivery2 = delivalue.toStringAsFixed(2);
+                        third = value3.toStringAsFixed(2);
+                        delivery3 = delivalue3.toStringAsFixed(2);
                         image3 = "assets/images/delivereat.png";
                       } else {
-                        first = value3.toString();
-                        delivery = delivalue3.toString();
+                        first = value3.toStringAsFixed(2);
+                        delivery = delivalue3.toStringAsFixed(2);
                         image = "assets/images/delivereat.png";
-                        second = value2.toString();
-                        delivery2 = delivalue2.toString();
+                        second = value2.toStringAsFixed(2);
+                        delivery2 = delivalue2.toStringAsFixed(2);
                         image2 = "assets/images/foodpanda1.png";
-                        third = value.toString();
+                        third = value.toStringAsFixed(2);
                         image3 = "assets/images/grabfood.jpg";
-                        delivery3 = delivalue.toString();
+                        delivery3 = delivalue.toStringAsFixed(2);
                       }
                     } else if (value2 == 0) {
-                      first = value3.toString();
+                      first = value3.toStringAsFixed(2);
                       image = "assets/images/delivereat.png";
-                      delivery = delivalue3.toString();
-                      second = value.toString();
+                      delivery = delivalue3.toStringAsFixed(2);
+                      second = value.toStringAsFixed(2);
                       image2 = "assets/images/grabfood.jpg";
-                      delivery2 = delivalue.toString();
-                      third = value2.toString();
+                      delivery2 = delivalue.toStringAsFixed(2);
+                      third = value2.toStringAsFixed(2);
                       image3 = "assets/images/foodpanda1.png";
-                      delivery3 = delivalue2.toString();
+                      delivery3 = delivalue2.toStringAsFixed(2);
                     } else {
-                      first = value2.toString();
+                      first = value2.toStringAsFixed(2);
                       image = "assets/images/foodpanda1.png";
-                      delivery = delivalue2.toString();
-                      second = value3.toString();
+                      delivery = delivalue2.toStringAsFixed(2);
+                      second = value3.toStringAsFixed(2);
                       image2 = "assets/images/delivereat.png";
-                      delivery2 = delivalue3.toString();
-                      third = value.toString();
+                      delivery2 = delivalue3.toStringAsFixed(2);
+                      third = value.toStringAsFixed(2);
                       image3 = "assets/images/grabfood.jpg";
-                      delivery3 = delivalue.toString();
+                      delivery3 = delivalue.toStringAsFixed(2);
                     }
                   } else if (value2 == 0) {
-                    first = value.toString();
+                    first = value.toStringAsFixed(2);
                     image = "assets/images/grabfood.jpg";
-                    delivery = delivalue2.toString();
-                    second = value3.toString();
+                    delivery = delivalue2.toStringAsFixed(2);
+                    second = value3.toStringAsFixed(2);
                     image2 = "assets/images/delivereat.png";
-                    delivery2 = delivalue3.toString();
-                    third = value2.toString();
+                    delivery2 = delivalue3.toStringAsFixed(2);
+                    third = value2.toStringAsFixed(2);
                     image3 = "assets/images/foodpanda1.png";
-                    delivery3 = delivalue.toString();
+                    delivery3 = delivalue.toStringAsFixed(2);
                   } else {
-                    first = value2.toString();
+                    first = value2.toStringAsFixed(2);
                     image = "assets/images/foodpanda1.png";
-                    delivery = delivalue2.toString();
-                    second = value.toString();
+                    delivery = delivalue2.toStringAsFixed(2);
+                    second = value.toStringAsFixed(2);
                     image2 = "assets/images/grabfood.jpg";
-                    delivery2 = delivalue.toString();
-                    third = value3.toString();
+                    delivery2 = delivalue.toStringAsFixed(2);
+                    third = value3.toStringAsFixed(2);
                     image3 = "assets/images/delivereat.png";
-                    delivery3 = delivalue3.toString();
+                    delivery3 = delivalue3.toStringAsFixed(2);
                   }
                 } else if (value2 > value3) {
                   if (value3 > value) {
                     if (value != 0) {
-                      first = value.toString();
+                      first = value.toStringAsFixed(2);
                       image = "assets/images/grabfood.jpg";
-                      delivery = delivalue.toString();
-                      second = value3.toString();
+                      delivery = delivalue.toStringAsFixed(2);
+                      second = value3.toStringAsFixed(2);
                       image2 = "assets/images/delivereat.png";
-                      delivery2 = delivalue3.toString();
-                      third = value2.toString();
+                      delivery2 = delivalue3.toStringAsFixed(2);
+                      third = value2.toStringAsFixed(2);
                       image3 = "assets/images/foodpanda1.png";
-                      delivery = delivalue2.toString();
+                      delivery = delivalue2.toStringAsFixed(2);
                     } else {
-                      first = value3.toString();
+                      first = value3.toStringAsFixed(2);
                       image = "assets/images/delivereat.png";
-                      delivery = delivalue3.toString();
-                      second = value2.toString();
+                      delivery = delivalue3.toStringAsFixed(2);
+                      second = value2.toStringAsFixed(2);
                       image2 = "assets/images/foodpanda1.png";
-                      delivery2 = delivalue2.toString();
-                      third = value.toString();
+                      delivery2 = delivalue2.toStringAsFixed(2);
+                      third = value.toStringAsFixed(2);
                       image3 = "assets/images/grabfood.jpg";
-                      delivery3 = delivalue.toString();
+                      delivery3 = delivalue.toStringAsFixed(2);
                     }
                   } else if (value3 == 0) {
-                    first = value.toString();
+                    first = value.toStringAsFixed(2);
                     image = "assets/images/grabfood.jpg";
-                    delivery = delivalue.toString();
-                    second = value2.toString();
+                    delivery = delivalue.toStringAsFixed(2);
+                    second = value2.toStringAsFixed(2);
                     image2 = "assets/images/foodpanda1.png";
-                    delivery2 = delivalue2.toString();
-                    third = value3.toString();
+                    delivery2 = delivalue2.toStringAsFixed(2);
+                    third = value3.toStringAsFixed(2);
                     image3 = "assets/images/delivereat.png";
-                    delivery3 = delivalue3.toString();
+                    delivery3 = delivalue3.toStringAsFixed(2);
                   } else {
-                    first = value3.toString();
+                    first = value3.toStringAsFixed(2);
                     image = "assets/images/delivereat.png";
-                    delivery = delivalue3.toString();
-                    second = value.toString();
+                    delivery = delivalue3.toStringAsFixed(2);
+                    second = value.toStringAsFixed(2);
                     image2 = "assets/images/grabfood.jpg";
-                    delivery2 = delivalue.toString();
-                    third = value2.toString();
+                    delivery2 = delivalue.toStringAsFixed(2);
+                    third = value2.toStringAsFixed(2);
                     image3 = "assets/images/foodpanda1.png";
-                    delivery3 = delivalue2.toString();
+                    delivery3 = delivalue2.toStringAsFixed(2);
                   }
                 } else {
-                  first = value.toString();
+                  first = value.toStringAsFixed(2);
                   image = "assets/images/grabfood.jpg";
-                  delivery = delivalue.toString();
-                  second = value2.toString();
+                  delivery = delivalue.toStringAsFixed(2);
+                  second = value2.toStringAsFixed(2);
                   image2 = "assets/images/foodpanda1.png";
-                  delivery2 = delivalue2.toString();
-                  third = value3.toString();
+                  delivery2 = delivalue2.toStringAsFixed(2);
+                  third = value3.toStringAsFixed(2);
                   image3 = "assets/images/delivereat.png";
-                  delivery3 = delivalue3.toString();
+                  delivery3 = delivalue3.toStringAsFixed(2);
                 }
 
                 return Column(
@@ -207,7 +207,7 @@ class GetPrice extends StatelessWidget {
                                     Container(
                                       margin: const EdgeInsets.only(left: 30),
                                       child: Text(
-                                        "Price from",
+                                        "Price ",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                           color: Colors.black,
@@ -231,7 +231,7 @@ class GetPrice extends StatelessWidget {
                                 Container(
                                   margin: const EdgeInsets.only(left: 30),
                                   child: Text(
-                                    "Delivery fee = RM$delivery",
+                                    "Delivery fee = RM$delivery ",
                                     style: GoogleFonts.montserrat(
                                         textStyle: TextStyle(
                                       color: Colors.black,
@@ -288,7 +288,7 @@ class GetPrice extends StatelessWidget {
                                     Container(
                                       margin: const EdgeInsets.only(left: 30),
                                       child: Text(
-                                        "Price from",
+                                        "Price",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                           color: Colors.black,
@@ -369,7 +369,7 @@ class GetPrice extends StatelessWidget {
                                     Container(
                                       margin: const EdgeInsets.only(left: 30),
                                       child: Text(
-                                        "Price from",
+                                        "Price",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                           color: Colors.black,
