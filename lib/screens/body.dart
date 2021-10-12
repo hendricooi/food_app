@@ -148,7 +148,8 @@ class _BodyState extends State<Body> {
                           MaterialPageRoute(builder: (context) => Localfood()),
                         );
                       },
-                      child: Foodoption("assets/images/local.jpg", "Local")),
+                      child:
+                          Foodoption("assets/images/local.jpg", "Malaysian")),
                 ],
               ),
             ),

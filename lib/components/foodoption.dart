@@ -32,7 +32,7 @@ class Foodoption extends StatelessWidget {
                 height: 80,
               ),
             ),
-            Text(text),
+            Text(text, style: TextStyle(color: Colors.black)),
           ],
         ));
   }
