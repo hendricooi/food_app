@@ -3,7 +3,7 @@ import 'package:food_app/components/drawer.dart';
 import 'package:food_app/screens/body.dart';
 import 'package:food_app/services/auth_services.dart';
 import 'package:provider/provider.dart';
-import '../../components/app_bar.dart';
+import '../components/app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {

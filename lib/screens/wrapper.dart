@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/screens/login.dart';
+import 'package:food_app/login/login.dart';
 import 'package:food_app/services/auth_services.dart';
 import 'package:provider/provider.dart';
 
-import '../User.dart';
-import 'home/home-screen.dart';
+import '../services/User.dart';
+import 'home-screen.dart';
 
 class Wrapper extends StatelessWidget {
   @override

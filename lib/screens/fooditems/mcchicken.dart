@@ -21,10 +21,31 @@ class _McChickenState extends State<McChicken> {
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        GetPrice(1, "grabMcC", "pandaMcC", "deliverMcC"),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 210,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30)),
+              image: DecorationImage(
+                  image: AssetImage("assets/images/mcjiken.jpg")),
+            ),
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30)),
+              ),
+            ),
+          ),
+          GetPrice(1, "grabMcC", "pandaMcC", "deliverMcC", "grabdeli",
+              "pandadeli", "eatdeli"),
+        ],
+      ),
     );
   }
 }

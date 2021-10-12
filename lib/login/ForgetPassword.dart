@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:food_app/screens/ConfirmEmail.dart';
-import 'package:food_app/screens/login.dart';
+import 'package:food_app/login/ConfirmEmail.dart';
+import 'package:food_app/login/login.dart';
 
 class ForgotPassword extends StatefulWidget {
   static String id = 'forgot-password';

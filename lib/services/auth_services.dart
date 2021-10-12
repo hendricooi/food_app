@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:fluttertoast/fluttertoast.dart';
 
-import 'package:food_app/User.dart';
+import 'package:food_app/services/User.dart';
 
 class AuthService {
   final auth.FirebaseAuth _auth = auth.FirebaseAuth.instance;
