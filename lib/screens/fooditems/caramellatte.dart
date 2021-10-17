@@ -1,19 +1,21 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/services/GetPrice.dart';
+import 'package:food_app/services/GetPriceSB.dart';
+import 'package:food_app/services/GetPricedrinks.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Signature extends StatefulWidget {
+class CaramelLatte extends StatefulWidget {
   @override
-  State<Signature> createState() => _Signature();
+  State<CaramelLatte> createState() => _CaramelLatte();
 }
 
-class _Signature extends State<Signature> {
+class _CaramelLatte extends State<CaramelLatte> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Signature Box - Classic"),
+          title: Text("Caramel Latte"),
         ),
         body: Body());
   }
@@ -32,8 +34,8 @@ class Body extends StatelessWidget {
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30)),
-              image: DecorationImage(
-                  image: AssetImage("assets/images/signature.jpg")),
+              image:
+                  DecorationImage(image: AssetImage("assets/images/latte.jpg")),
             ),
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -65,8 +67,8 @@ class Body extends StatelessWidget {
           ),
         ]),
         Container(
-            child: GetPrice(29, "grab", "foodpanda", "delivereat", "grabdeli",
-                "pandadeli", "deliverdeli"))
+            child: GetPricedrinks(9, "grab", "foodpanda", "deliver", "grabdeli",
+                "pandadeli", "deliverdeli", "grabr", "pandar", "deliverr"))
       ]),
     );
   }

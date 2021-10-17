@@ -106,7 +106,7 @@ class Dominos extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                "Classic Chicken Pizza",
+                                "Classic Chicken Pizza - R",
                                 style: GoogleFonts.montserrat(
                                     textStyle: TextStyle(
                                         color: Colors.black,
@@ -161,7 +161,7 @@ class Dominos extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                "Extravaganzza Pizza",
+                                "Extravaganzza Pizza - R",
                                 style: GoogleFonts.montserrat(
                                     textStyle: TextStyle(
                                         color: Colors.black,
@@ -216,7 +216,7 @@ class Dominos extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                "Meat Mania Pizza",
+                                "Meat Mania Pizza - R",
                                 style: GoogleFonts.montserrat(
                                     textStyle: TextStyle(
                                         color: Colors.black,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/screens/fooditems/chicken.dart';
-import 'package:food_app/screens/fooditems/sausage.dart';
 import 'package:food_app/screens/fooditems/wing.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -179,63 +178,63 @@ class Kimpoh extends StatelessWidget {
                         ),
                         Container(
                           height: 130,
-                          child: Image.asset("assets/images/kim2.jpg",
+                          child: Image.asset("assets/images/kim3.jpg",
                               height: 150),
                         )
                       ],
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 10),
-                    height: 150,
-                    decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Colors.black.withOpacity(0.10))),
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.symmetric(vertical: 10),
-                          alignment: Alignment.centerLeft,
-                          height: 150,
-                          width: 250,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Text(
-                                "Roasted Sausage Rice",
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold)),
-                              ),
-                              TextButton.icon(
-                                icon: Icon(Icons.price_check),
-                                label: Text('Check Price'),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Sausage()),
-                                  );
-                                },
-                              )
-                            ],
-                          ),
-                        ),
-                        Container(
-                          height: 130,
-                          child: Image.asset(
-                            "assets/images/kim3.jpg",
-                            height: 150,
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                  // Container(
+                  //   margin: EdgeInsets.symmetric(horizontal: 10),
+                  //   height: 150,
+                  //   decoration: BoxDecoration(
+                  //     border: Border(
+                  //         bottom: BorderSide(
+                  //             color: Colors.black.withOpacity(0.10))),
+                  //   ),
+                  //   child: Row(
+                  //     children: [
+                  //       Container(
+                  //         margin: EdgeInsets.symmetric(vertical: 10),
+                  //         alignment: Alignment.centerLeft,
+                  //         height: 150,
+                  //         width: 250,
+                  //         child: Column(
+                  //           crossAxisAlignment: CrossAxisAlignment.start,
+                  //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //           children: [
+                  //             Text(
+                  //               "Roasted Sausage Rice",
+                  //               style: GoogleFonts.montserrat(
+                  //                   textStyle: TextStyle(
+                  //                       color: Colors.black,
+                  //                       fontSize: 15,
+                  //                       fontWeight: FontWeight.bold)),
+                  //             ),
+                  //             TextButton.icon(
+                  //               icon: Icon(Icons.price_check),
+                  //               label: Text('Check Price'),
+                  //               onPressed: () {
+                  //                 Navigator.push(
+                  //                   context,
+                  //                   MaterialPageRoute(
+                  //                       builder: (context) => Sausage()),
+                  //                 );
+                  //               },
+                  //             )
+                  //           ],
+                  //         ),
+                  //       ),
+                  //       Container(
+                  //         height: 130,
+                  //         child: Image.asset(
+                  //           "assets/images/kim3.jpg",
+                  //           height: 150,
+                  //         ),
+                  //       )
+                  //     ],
+                  //   ),
+                  // ),
                 ],
               ),
             ],

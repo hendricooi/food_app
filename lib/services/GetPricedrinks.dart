@@ -2,13 +2,19 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class GetPrice extends StatelessWidget {
+class GetPricedrinks extends StatelessWidget {
   late String option,
       option2,
       option3,
       first = "",
       second = "",
       third = "",
+      optionl,
+      option2l,
+      option3l,
+      firstl = "",
+      secondl = "",
+      thirdl = "",
       deli,
       deli2,
       deli3,
@@ -17,14 +23,31 @@ class GetPrice extends StatelessWidget {
       delivery3 = "";
   int documents;
 
-  GetPrice(this.documents, this.option, this.option2, this.option3, this.deli,
-      this.deli2, this.deli3);
+  GetPricedrinks(
+      this.documents,
+      this.option,
+      this.option2,
+      this.option3,
+      this.deli,
+      this.deli2,
+      this.deli3,
+      this.optionl,
+      this.option2l,
+      this.option3l);
   final Stream<QuerySnapshot> price =
       FirebaseFirestore.instance.collection('price').snapshots();
 
   @override
   Widget build(BuildContext context) {
-    double value, value2, value3, delivalue, delivalue2, delivalue3;
+    double value,
+        value2,
+        value3,
+        valuel,
+        value2l,
+        value3l,
+        delivalue,
+        delivalue2,
+        delivalue3;
     String image = "", image2 = "", image3 = "";
 
     return Container(
@@ -51,71 +74,92 @@ class GetPrice extends StatelessWidget {
                 delivalue = double.parse('${data.docs[documents][deli]}');
                 delivalue2 = double.parse('${data.docs[documents][deli2]}');
                 delivalue3 = double.parse('${data.docs[documents][deli3]}');
+                valuel = double.parse('${data.docs[documents][optionl]}');
+                value2l = double.parse('${data.docs[documents][option2l]}');
+                value3l = double.parse('${data.docs[documents][option3l]}');
 
                 if (value > value2) {
                   if (value > value3) {
                     if (value2 > value3) {
                       if (value3 == 0) {
-                        first = value2.toString();
+                        first = value2.toStringAsFixed(2);
                         image = "assets/images/foodpanda1.png";
+                        firstl = value2l.toStringAsFixed(2);
                         delivery = delivalue2.toStringAsFixed(2);
                         second = value.toStringAsFixed(2);
                         image2 = "assets/images/grabfood.jpg";
+                        secondl = valuel.toStringAsFixed(2);
                         delivery2 = delivalue.toStringAsFixed(2);
                         third = value3.toStringAsFixed(2);
+                        thirdl = value3l.toStringAsFixed(2);
                         delivery3 = delivalue3.toStringAsFixed(2);
                         image3 = "assets/images/delivereatnot.jpg";
                       } else {
                         first = value3.toStringAsFixed(2);
                         delivery = delivalue3.toStringAsFixed(2);
+                        firstl = value3l.toStringAsFixed(2);
                         image = "assets/images/delivereat.png";
                         second = value2.toStringAsFixed(2);
+                        secondl = value2l.toStringAsFixed(2);
                         delivery2 = delivalue2.toStringAsFixed(2);
                         image2 = "assets/images/foodpanda1.png";
                         third = value.toStringAsFixed(2);
+                        firstl = value3l.toStringAsFixed(2);
                         image3 = "assets/images/grabfood.jpg";
                         delivery3 = delivalue.toStringAsFixed(2);
                       }
                     } else if (value2 == 0) {
                       first = value3.toStringAsFixed(2);
                       image = "assets/images/delivereat.png";
+                      firstl = value3l.toStringAsFixed(2);
                       delivery = delivalue3.toStringAsFixed(2);
                       second = value.toStringAsFixed(2);
+                      secondl = valuel.toStringAsFixed(2);
                       image2 = "assets/images/grabfood.jpg";
                       delivery2 = delivalue.toStringAsFixed(2);
                       third = value2.toStringAsFixed(2);
-                      image3 = "assets/images/foodpandanot.jpg";
+                      thirdl = value2l.toStringAsFixed(2);
+                      image3 = "assets/images/foodpandanot.png";
                       delivery3 = delivalue2.toStringAsFixed(2);
                     } else {
                       first = value2.toStringAsFixed(2);
                       image = "assets/images/foodpanda1.png";
+                      firstl = value2l.toStringAsFixed(2);
                       delivery = delivalue2.toStringAsFixed(2);
                       second = value3.toStringAsFixed(2);
+                      secondl = value3l.toStringAsFixed(2);
                       image2 = "assets/images/delivereat.png";
                       delivery2 = delivalue3.toStringAsFixed(2);
                       third = value.toStringAsFixed(2);
+                      thirdl = valuel.toStringAsFixed(2);
                       image3 = "assets/images/grabfood.jpg";
                       delivery3 = delivalue.toStringAsFixed(2);
                     }
                   } else if (value2 == 0) {
                     first = value.toStringAsFixed(2);
                     image = "assets/images/grabfood.jpg";
-                    delivery = delivalue2.toStringAsFixed(2);
+                    firstl = valuel.toStringAsFixed(2);
+                    delivery = delivalue.toStringAsFixed(2);
                     second = value3.toStringAsFixed(2);
+                    secondl = value3l.toStringAsFixed(2);
                     image2 = "assets/images/delivereat.png";
                     delivery2 = delivalue3.toStringAsFixed(2);
                     third = value2.toStringAsFixed(2);
+                    thirdl = value2l.toStringAsFixed(2);
                     image3 = "assets/images/foodpandanot.jpg";
-                    delivery3 = delivalue.toStringAsFixed(2);
+                    delivery3 = delivalue2.toStringAsFixed(2);
                   } else {
                     first = value2.toStringAsFixed(2);
+                    firstl = value2l.toStringAsFixed(2);
                     image = "assets/images/foodpanda1.png";
                     delivery = delivalue2.toStringAsFixed(2);
                     second = value.toStringAsFixed(2);
+                    secondl = valuel.toStringAsFixed(2);
                     image2 = "assets/images/grabfood.jpg";
                     delivery2 = delivalue.toStringAsFixed(2);
                     third = value3.toStringAsFixed(2);
                     image3 = "assets/images/delivereat.png";
+                    thirdl = value3l.toStringAsFixed(2);
                     delivery3 = delivalue3.toStringAsFixed(2);
                   }
                 } else if (value2 > value3) {
@@ -123,53 +167,68 @@ class GetPrice extends StatelessWidget {
                     if (value != 0) {
                       first = value.toStringAsFixed(2);
                       image = "assets/images/grabfood.jpg";
+                      firstl = valuel.toStringAsFixed(2);
                       delivery = delivalue.toStringAsFixed(2);
                       second = value3.toStringAsFixed(2);
+                      secondl = value3l.toStringAsFixed(2);
                       image2 = "assets/images/delivereat.png";
                       delivery2 = delivalue3.toStringAsFixed(2);
                       third = value2.toStringAsFixed(2);
+                      thirdl = value2l.toStringAsFixed(2);
                       image3 = "assets/images/foodpanda1.png";
-                      delivery3 = delivalue2.toStringAsFixed(2);
+                      delivery = delivalue2.toStringAsFixed(2);
                     } else {
                       first = value3.toStringAsFixed(2);
                       image = "assets/images/delivereat.png";
+                      firstl = value3l.toStringAsFixed(2);
                       delivery = delivalue3.toStringAsFixed(2);
                       second = value2.toStringAsFixed(2);
+                      secondl = value2l.toStringAsFixed(2);
                       image2 = "assets/images/foodpanda1.png";
                       delivery2 = delivalue2.toStringAsFixed(2);
                       third = value.toStringAsFixed(2);
+                      thirdl = valuel.toStringAsFixed(2);
                       image3 = "assets/images/grabfoodnot.jpg";
                       delivery3 = delivalue.toStringAsFixed(2);
                     }
                   } else if (value3 == 0) {
                     first = value.toStringAsFixed(2);
                     image = "assets/images/grabfood.jpg";
+                    firstl = valuel.toStringAsFixed(2);
                     delivery = delivalue.toStringAsFixed(2);
                     second = value2.toStringAsFixed(2);
+                    secondl = value2l.toStringAsFixed(2);
                     image2 = "assets/images/foodpanda1.png";
                     delivery2 = delivalue2.toStringAsFixed(2);
                     third = value3.toStringAsFixed(2);
+                    thirdl = value3l.toStringAsFixed(2);
                     image3 = "assets/images/delivereatnot.jpg";
                     delivery3 = delivalue3.toStringAsFixed(2);
                   } else {
                     first = value3.toStringAsFixed(2);
                     image = "assets/images/delivereat.png";
+                    firstl = value3l.toStringAsFixed(2);
                     delivery = delivalue3.toStringAsFixed(2);
                     second = value.toStringAsFixed(2);
+                    secondl = valuel.toStringAsFixed(2);
                     image2 = "assets/images/grabfood.jpg";
                     delivery2 = delivalue.toStringAsFixed(2);
                     third = value2.toStringAsFixed(2);
+                    thirdl = value2l.toStringAsFixed(2);
                     image3 = "assets/images/foodpanda1.png";
                     delivery3 = delivalue2.toStringAsFixed(2);
                   }
                 } else {
                   first = value.toStringAsFixed(2);
                   image = "assets/images/grabfood.jpg";
+                  firstl = valuel.toStringAsFixed(2);
                   delivery = delivalue.toStringAsFixed(2);
                   second = value2.toStringAsFixed(2);
+                  secondl = value2l.toStringAsFixed(2);
                   image2 = "assets/images/foodpanda1.png";
                   delivery2 = delivalue2.toStringAsFixed(2);
                   third = value3.toStringAsFixed(2);
+                  thirdl = value3l.toStringAsFixed(2);
                   image3 = "assets/images/delivereat.png";
                   delivery3 = delivalue3.toStringAsFixed(2);
                 }
@@ -287,11 +346,11 @@ class GetPrice extends StatelessWidget {
                                     Container(
                                       margin: const EdgeInsets.only(left: 20),
                                       child: Text(
-                                        "RM $first",
+                                        "Regular - RM $first \n     Large - RM $firstl",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                                 color: Colors.black,
-                                                fontSize: 20,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.bold)),
                                       ),
                                     ),
@@ -368,11 +427,11 @@ class GetPrice extends StatelessWidget {
                                     Container(
                                       margin: const EdgeInsets.only(left: 20),
                                       child: Text(
-                                        "RM $second",
+                                        "Regular - RM $second \n     Large - RM $secondl",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                                 color: Colors.black,
-                                                fontSize: 20,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.bold)),
                                       ),
                                     ),
@@ -449,11 +508,11 @@ class GetPrice extends StatelessWidget {
                                     Container(
                                       margin: const EdgeInsets.only(left: 20),
                                       child: Text(
-                                        "RM $third",
+                                        "Regular - RM $third \n     Large - RM $thirdl",
                                         style: GoogleFonts.montserrat(
                                             textStyle: TextStyle(
                                                 color: Colors.black,
-                                                fontSize: 20,
+                                                fontSize: 15,
                                                 fontWeight: FontWeight.bold)),
                                       ),
                                     ),

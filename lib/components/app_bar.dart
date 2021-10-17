@@ -23,7 +23,7 @@ import 'package:food_app/screens/fooditems/a7.dart';
 import 'package:food_app/screens/fooditems/bawang.dart';
 import 'package:food_app/screens/fooditems/canai.dart';
 import 'package:food_app/screens/fooditems/caramelfrap.dart';
-import 'package:food_app/screens/fooditems/caramellattee.dart';
+import 'package:food_app/screens/fooditems/caramellatte.dart';
 import 'package:food_app/screens/fooditems/chicken.dart';
 import 'package:food_app/screens/fooditems/classicpizza.dart';
 import 'package:food_app/screens/fooditems/double.dart';
@@ -43,7 +43,6 @@ import 'package:food_app/screens/fooditems/mt02.dart';
 import 'package:food_app/screens/fooditems/mt03.dart';
 import 'package:food_app/screens/fooditems/penang.dart';
 import 'package:food_app/screens/fooditems/premium.dart';
-import 'package:food_app/screens/fooditems/sausage.dart';
 import 'package:food_app/screens/fooditems/signature.dart';
 import 'package:food_app/screens/fooditems/single.dart';
 import 'package:food_app/screens/fooditems/spicy.dart';
@@ -296,7 +295,7 @@ class DataSearch extends SearchDelegate<String> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CaramelLattee()));
+                              builder: (context) => CaramelLatte()));
                     }
                     if (query == "Java Chip Frappuccino") {
                       Navigator.push(context,
@@ -306,7 +305,7 @@ class DataSearch extends SearchDelegate<String> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => GreeTeaFrap()));
+                              builder: (context) => GreenTeaFrap()));
                     }
                     if (query == "Caramel Frappuccino") {
                       Navigator.push(
@@ -373,10 +372,6 @@ class DataSearch extends SearchDelegate<String> {
                     if (query == "Roasted Chicken Wing Rice") {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Wing()));
-                    }
-                    if (query == "Roasted Sausage Rice") {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Sausage()));
                     }
                     if (query == "Roti Canai") {
                       Navigator.push(context,
@@ -532,7 +527,7 @@ class DataSearch extends SearchDelegate<String> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => CaramelLattee()));
+                              builder: (context) => CaramelLatte()));
                     }
                     if (query == "Java Chip Frappuccino") {
                       Navigator.push(context,
@@ -542,7 +537,7 @@ class DataSearch extends SearchDelegate<String> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => GreeTeaFrap()));
+                              builder: (context) => GreenTeaFrap()));
                     }
                     if (query == "Caramel Frappuccino") {
                       Navigator.push(
@@ -609,10 +604,6 @@ class DataSearch extends SearchDelegate<String> {
                     if (query == "Roasted Chicken Wing Rice") {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Wing()));
-                    }
-                    if (query == "Roasted Sausage Rice") {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Sausage()));
                     }
                     if (query == "Roti Canai") {
                       Navigator.push(context,

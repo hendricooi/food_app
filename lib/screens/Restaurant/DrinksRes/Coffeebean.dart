@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/screens/fooditems/caramellattee.dart';
+import 'package:food_app/screens/fooditems/caramellatte.dart';
 import 'package:food_app/screens/fooditems/mocha.dart';
 import 'package:food_app/screens/fooditems/vanillacookie.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -236,7 +236,7 @@ class Coffeebean extends StatelessWidget {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => CaramelLattee()),
+                                        builder: (context) => CaramelLatte()),
                                   );
                                 },
                               )

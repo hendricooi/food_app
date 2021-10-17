@@ -216,7 +216,7 @@ class Tealive extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                "MT03. Classic Roasted Milk Tea With Grass Jelly",
+                                "MT03. Roasted Milk Tea With Grass Jelly",
                                 style: GoogleFonts.montserrat(
                                     textStyle: TextStyle(
                                         color: Colors.black,

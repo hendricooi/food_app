@@ -64,7 +64,7 @@ class Body extends StatelessWidget {
               ),
             ),
           ]),
-          GetPrice(1, "grabMcC", "pandaMcC", "deliverMcC", "grabdeli",
+          GetPrice(6, "grabMcC", "pandaMcC", "deliverMcC", "grabdeli",
               "pandadeli", "eatdeli"),
         ],
       ),
