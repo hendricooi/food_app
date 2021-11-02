@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:food_app/components/favourite.dart';
 import 'package:food_app/screens/Restaurant/DessertRes/Baskin.dart';
 import 'package:food_app/screens/Restaurant/DessertRes/Blackball.dart';
 import 'package:food_app/screens/Restaurant/DessertRes/Mat.dart';
@@ -78,6 +79,15 @@ AppBar buildAppBar(BuildContext context) {
       ),
     ),
     actions: <Widget>[
+      IconButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Favourite()),
+          );
+        },
+        icon: Icon(Icons.favorite_border, color: Colors.black),
+      ),
       IconButton(
         onPressed: () {
           showSearch(context: context, delegate: DataSearch());

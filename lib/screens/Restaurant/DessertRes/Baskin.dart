@@ -33,8 +33,8 @@ class Baskin extends StatelessWidget {
                             bottomRight: Radius.circular(30)),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.grey.withOpacity(0.7),
-                            Colors.white.withOpacity(0.7),
+                            Colors.grey.withOpacity(0.8),
+                            Colors.white.withOpacity(0.8),
                           ],
                         ),
                       ),
@@ -45,15 +45,14 @@ class Baskin extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.only(top: 80),
                         alignment: Alignment.center,
-                        child: Text(
-                          "Baskin-Robbins",
-                          style: GoogleFonts.roboto(
-                            textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
+                        child: Text("Baskin-Robbins(Gurney Plaza)",
+                            style: GoogleFonts.roboto(
+                              textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            textAlign: TextAlign.center),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 20),
@@ -62,9 +61,9 @@ class Baskin extends StatelessWidget {
                           "Home of delicious cones, shakes, treats, cakes, pies, and more!",
                           style: GoogleFonts.montserrat(
                               textStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 12,
-                          )),
+                                  color: Colors.black,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold)),
                           textAlign: TextAlign.center,
                         ),
                       )

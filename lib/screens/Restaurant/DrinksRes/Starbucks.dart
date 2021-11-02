@@ -33,8 +33,8 @@ class Starbucks extends StatelessWidget {
                             bottomRight: Radius.circular(30)),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.brown.withOpacity(0.7),
-                            Colors.white.withOpacity(0.7),
+                            Colors.brown.withOpacity(0.8),
+                            Colors.white.withOpacity(0.8),
                           ],
                         ),
                       ),
@@ -46,7 +46,7 @@ class Starbucks extends StatelessWidget {
                         margin: EdgeInsets.only(top: 80),
                         alignment: Alignment.center,
                         child: Text(
-                          "Starbucks (Penang)",
+                          "Starbucks (All Season Place)",
                           style: GoogleFonts.roboto(
                             textStyle: TextStyle(
                                 color: Colors.black,
@@ -63,6 +63,7 @@ class Starbucks extends StatelessWidget {
                           style: GoogleFonts.montserrat(
                               textStyle: TextStyle(
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                             fontSize: 12,
                           )),
                           textAlign: TextAlign.center,

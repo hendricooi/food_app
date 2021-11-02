@@ -33,8 +33,8 @@ class Mcd extends StatelessWidget {
                             bottomRight: Radius.circular(30)),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.grey.withOpacity(0.7),
-                            Colors.white.withOpacity(0.7),
+                            Colors.grey.withOpacity(0.8),
+                            Colors.white.withOpacity(0.8),
                           ],
                         ),
                       ),
@@ -45,15 +45,14 @@ class Mcd extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.only(top: 80),
                         alignment: Alignment.center,
-                        child: Text(
-                          "McDonald's Malaysia",
-                          style: GoogleFonts.roboto(
-                            textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
+                        child: Text("McDonald's Malaysia \n(Caltex Farlim)",
+                            style: GoogleFonts.roboto(
+                              textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            textAlign: TextAlign.center),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 20),
@@ -62,7 +61,7 @@ class Mcd extends StatelessWidget {
                           "Burgers, fries, nuggets or just a drink. Good food, great time. 100% HALAL Certified.",
                           style: GoogleFonts.montserrat(
                               textStyle: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.black87,
                                   fontSize: 12,
                                   fontWeight: FontWeight.bold)),
                           textAlign: TextAlign.center,

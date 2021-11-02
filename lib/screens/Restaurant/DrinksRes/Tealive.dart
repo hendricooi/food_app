@@ -37,8 +37,8 @@ class Tealive extends StatelessWidget {
                             bottomRight: Radius.circular(30)),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.purpleAccent.withOpacity(0.7),
-                            Colors.white.withOpacity(0.3),
+                            Colors.purpleAccent.withOpacity(0.8),
+                            Colors.white.withOpacity(0.8),
                           ],
                         ),
                       ),
@@ -50,7 +50,7 @@ class Tealive extends StatelessWidget {
                         margin: EdgeInsets.only(top: 80),
                         alignment: Alignment.center,
                         child: Text(
-                          "Tealive (Penang)",
+                          "Tealive (All Season Place)",
                           style: GoogleFonts.roboto(
                             textStyle: TextStyle(
                                 color: Colors.black,
@@ -65,8 +65,10 @@ class Tealive extends StatelessWidget {
                         child: Text(
                           "We are a team of passionate tea people. \nAnd we're here to brew new life to tea.",
                           style: GoogleFonts.montserrat(
-                              textStyle:
-                                  TextStyle(color: Colors.black, fontSize: 12)),
+                              textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold)),
                         ),
                       )
                     ],

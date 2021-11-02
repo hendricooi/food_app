@@ -33,8 +33,8 @@ class Village extends StatelessWidget {
                             bottomRight: Radius.circular(30)),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.grey.withOpacity(0.7),
-                            Colors.white.withOpacity(0.7),
+                            Colors.grey.withOpacity(0.8),
+                            Colors.white.withOpacity(0.8),
                           ],
                         ),
                       ),
@@ -45,15 +45,14 @@ class Village extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.only(top: 80),
                         alignment: Alignment.center,
-                        child: Text(
-                          "7 Village Noodle House",
-                          style: GoogleFonts.roboto(
-                            textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
+                        child: Text("7 Village Noodle House\n(Paya Terubong)",
+                            style: GoogleFonts.roboto(
+                              textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            textAlign: TextAlign.center),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 20),

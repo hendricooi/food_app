@@ -52,7 +52,7 @@ class Body extends StatelessWidget {
                     bottomRight: Radius.circular(30)),
                 image: DecorationImage(
                     colorFilter: ColorFilter.mode(
-                        Colors.black.withOpacity(0.6), BlendMode.dstATop),
+                        Colors.black.withOpacity(0.3), BlendMode.dstATop),
                     image: AssetImage("assets/images/watermark.PNG")),
               ),
               child: DecoratedBox(
@@ -65,7 +65,7 @@ class Body extends StatelessWidget {
             ),
           ]),
           GetPrice(6, "grabMcC", "pandaMcC", "deliverMcC", "grabdeli",
-              "pandadeli", "eatdeli"),
+              "pandadeli", "eatdeli", "foodname"),
         ],
       ),
     );

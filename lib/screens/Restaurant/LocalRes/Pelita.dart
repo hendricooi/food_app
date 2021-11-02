@@ -33,8 +33,8 @@ class Pelita extends StatelessWidget {
                             bottomRight: Radius.circular(30)),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.grey.withOpacity(0.7),
-                            Colors.white.withOpacity(0.7),
+                            Colors.grey.withOpacity(0.8),
+                            Colors.white.withOpacity(0.8),
                           ],
                         ),
                       ),
@@ -46,7 +46,7 @@ class Pelita extends StatelessWidget {
                         margin: EdgeInsets.only(top: 80),
                         alignment: Alignment.center,
                         child: Text(
-                          "Nasi Kandar Pelita",
+                          "Nasi Kandar Pelita \n(Lotus's E-gate)",
                           style: GoogleFonts.roboto(
                             textStyle: TextStyle(
                                 color: Colors.black,

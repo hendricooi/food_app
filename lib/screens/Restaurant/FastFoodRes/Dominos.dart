@@ -46,7 +46,7 @@ class Dominos extends StatelessWidget {
                         margin: EdgeInsets.only(top: 80),
                         alignment: Alignment.center,
                         child: Text(
-                          "Domino's Pizza",
+                          "Domino's Pizza(Farlim)",
                           style: GoogleFonts.roboto(
                             textStyle: TextStyle(
                                 color: Colors.black,
@@ -63,6 +63,7 @@ class Dominos extends StatelessWidget {
                           style: GoogleFonts.montserrat(
                               textStyle: TextStyle(
                             color: Colors.black,
+                            fontWeight: FontWeight.bold,
                             fontSize: 12,
                           )),
                           textAlign: TextAlign.center,

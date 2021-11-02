@@ -33,8 +33,8 @@ class Kfc extends StatelessWidget {
                             bottomRight: Radius.circular(30)),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.grey.withOpacity(0.7),
-                            Colors.white.withOpacity(0.7),
+                            Colors.grey.withOpacity(0.8),
+                            Colors.white.withOpacity(0.8),
                           ],
                         ),
                       ),
@@ -43,18 +43,16 @@ class Kfc extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(top: 80),
-                        alignment: Alignment.center,
-                        child: Text(
-                          "KFC (Kentucky Fried Chicken)",
-                          style: GoogleFonts.roboto(
-                            textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
+                          margin: EdgeInsets.only(top: 80),
+                          alignment: Alignment.center,
+                          child: Text("KFC (Kentucky Fried Chicken) (Farlim)",
+                              style: GoogleFonts.roboto(
+                                textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              textAlign: TextAlign.center)),
                       Container(
                         margin: EdgeInsets.only(top: 20),
                         alignment: Alignment.center,
@@ -64,6 +62,7 @@ class Kfc extends StatelessWidget {
                               textStyle: TextStyle(
                             color: Colors.black,
                             fontSize: 12,
+                            fontWeight: FontWeight.bold,
                           )),
                           textAlign: TextAlign.center,
                         ),

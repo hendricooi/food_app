@@ -33,8 +33,8 @@ class Coffeebean extends StatelessWidget {
                             bottomRight: Radius.circular(30)),
                         gradient: LinearGradient(
                           colors: [
-                            Colors.brown.withOpacity(0.7),
-                            Colors.white.withOpacity(0.7),
+                            Colors.brown.withOpacity(0.8),
+                            Colors.white.withOpacity(0.8),
                           ],
                         ),
                       ),
@@ -45,15 +45,15 @@ class Coffeebean extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.only(top: 80),
                         alignment: Alignment.center,
-                        child: Text(
-                          "The Coffee Bean & Tea Leaf",
-                          style: GoogleFonts.roboto(
-                            textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 30,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
+                        child:
+                            Text("The Coffee Bean & Tea Leaf(All Season Place)",
+                                style: GoogleFonts.roboto(
+                                  textStyle: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                textAlign: TextAlign.center),
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 20),
@@ -62,9 +62,9 @@ class Coffeebean extends StatelessWidget {
                           "This is what we are devoting our lives to, making sure every experience as unique and \npersonal so you, too, will Find your Flavor.",
                           style: GoogleFonts.montserrat(
                               textStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 12,
-                          )),
+                                  color: Colors.black,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold)),
                           textAlign: TextAlign.center,
                         ),
                       )
