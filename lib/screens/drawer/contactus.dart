@@ -6,8 +6,9 @@ class Contactus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          title: Text('Contact Us'),
           automaticallyImplyLeading: true,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.blue,
         ),
         backgroundColor: Colors.white,
         body: Container(

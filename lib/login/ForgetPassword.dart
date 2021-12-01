@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_app/login/ConfirmEmail.dart';
 import 'package:food_app/login/login.dart';
 
@@ -30,6 +31,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         }),
       );
     } catch (e) {
+      Fluttertoast.showToast(
+          msg: "Email is empty",
+          toastLength: Toast.LENGTH_LONG,
+          gravity: ToastGravity.CENTER,
+          backgroundColor: Colors.blueGrey,
+          textColor: Colors.red,
+          fontSize: 14.0);
       print(e);
     }
   }
@@ -83,12 +91,19 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   print(_email);
                 },
               ),
-              FlatButton(
-                child: Text('Sign In'),
+              TextButton.icon(
+                icon: Icon(Icons.backspace_outlined),
+                label: Text('Sign In'),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
               )
+              // FlatButton(
+              //   child: Text('Sign In'),
+              //   onPressed: () {
+              //     Navigator.of(context).pop();
+              //   },
+              // )
             ],
           ),
         ),

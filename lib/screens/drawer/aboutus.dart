@@ -9,7 +9,7 @@ class Aboutus extends StatelessWidget {
         centerTitle: true,
         title: Text('About Us'),
         automaticallyImplyLeading: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blue,
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,

@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(right: 8),
+                    margin: EdgeInsets.only(top: 3, right: 8),
                     child: Text("Sign Out",
                         style: GoogleFonts.montserrat(
                             textStyle: TextStyle(
@@ -48,7 +48,9 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 12,
                         ))),
                   ),
-                  Icon(Icons.exit_to_app_rounded),
+                  Container(
+                      margin: EdgeInsets.only(top: 3),
+                      child: Icon(Icons.exit_to_app_rounded)),
                 ],
               ),
             )

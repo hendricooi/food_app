@@ -76,7 +76,9 @@ class Body extends StatelessWidget {
                 "deliverdeli",
                 "grabl",
                 "foodpandal",
-                "deliverl"))
+                "deliverl",
+                "foodname",
+                "image"))
       ]),
     );
   }

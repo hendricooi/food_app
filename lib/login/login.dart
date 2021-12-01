@@ -140,8 +140,8 @@ class _LoginState extends State<Login> {
                             await authService.signInWithEmailAndPassword(
                                 emailController.text, passwordController.text);
                           } on FirebaseAuthException catch (error) {
-                            Fluttertoast.showToast(
-                                msg: error.code, gravity: ToastGravity.TOP);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text("$error")));
                           }
                         }
                       }),

@@ -37,72 +37,89 @@ class _Favourite extends State<Favourite> {
               children: snapshot.data!.docs.map((document) {
                 return Center(
                     child: Container(
-                  width: MediaQuery.of(context).size.width / 1.2,
-                  height: MediaQuery.of(context).size.height / 6,
-                  child: Container(
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 170,
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Food Name:\n" +
-                                document['foodName'] +
-                                "\nCompany: " +
-                                document['DeliCompany'] +
-                                "\nFood Price: RM" +
-                                document['Price'] +
-                                "\nDelivery Fees: RM" +
-                                document['Delivery'],
-                            style: GoogleFonts.montserrat(
-                              textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 12,
+                  width: MediaQuery.of(context).size.width / 1.1,
+                  height: MediaQuery.of(context).size.height / 5,
+                  child: SingleChildScrollView(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom:
+                              BorderSide(color: Colors.black.withOpacity(0.10)),
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(right: 8, top: 15),
+                            height: 120,
+                            width: 120,
+                            child: Image.asset(
+                              document['Image'],
+                              fit: BoxFit.scaleDown,
+                              alignment: Alignment.center,
+                            ),
+                          ),
+                          Container(
+                            width: 170,
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Food Name:\n" +
+                                  document['foodName'] +
+                                  "\nCompany: " +
+                                  document['DeliCompany'] +
+                                  "\nFood Price: RM" +
+                                  document['Price'] +
+                                  "\nDelivery Fees: RM" +
+                                  document['Delivery'],
+                              style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 12,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Container(
-                          width: 120,
-                          child:
-                              Image.asset(document['Image'], fit: BoxFit.fill),
-                        ),
-                        Align(
-                          alignment: Alignment.topRight,
-                          child: Padding(
-                            padding: const EdgeInsets.all(1.0),
-                            child: new IconButton(
-                                icon: Icon(
-                                  Icons.cancel,
-                                  color: Colors.red,
-                                ),
-                                onPressed: () {
-                                  FirebaseFirestore.instance
-                                      .collection("$uid")
-                                      .where(
-                                        "foodName",
-                                        isEqualTo: document["foodName"],
-                                      )
-                                      .where(
-                                        "Price",
-                                        isEqualTo: document["Price"],
-                                      )
-                                      .get()
-                                      .then((value) {
-                                    value.docs.forEach((element) {
-                                      FirebaseFirestore.instance
-                                          .collection("$uid")
-                                          .doc(element.id)
-                                          .delete()
-                                          .then((value) {
-                                        print("Success!");
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Padding(
+                              padding: const EdgeInsets.all(1.0),
+                              child: new IconButton(
+                                  icon: Icon(
+                                    Icons.cancel,
+                                    color: Colors.red,
+                                  ),
+                                  onPressed: () {
+                                    FirebaseFirestore.instance
+                                        .collection("$uid")
+                                        .where(
+                                          "foodName",
+                                          isEqualTo: document["foodName"],
+                                        )
+                                        .where(
+                                          "Price",
+                                          isEqualTo: document["Price"],
+                                        )
+                                        .where(
+                                          "DeliCompany",
+                                          isEqualTo: document["DeliCompany"],
+                                        )
+                                        .get()
+                                        .then((value) {
+                                      value.docs.forEach((element) {
+                                        FirebaseFirestore.instance
+                                            .collection("$uid")
+                                            .doc(element.id)
+                                            .delete()
+                                            .then((value) {
+                                          print("Success!");
+                                        });
                                       });
                                     });
-                                  });
-                                }),
-                          ),
-                        )
-                      ],
+                                  }),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ));

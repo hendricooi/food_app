@@ -67,7 +67,7 @@ class Body extends StatelessWidget {
         ]),
         Container(
             child: GetPrice(16, "grab", "foodpanda", "deliver", "grabdeli",
-                "pandadeli", "deliverdeli", "foodname"))
+                "pandadeli", "deliverdeli", "foodname", "image"))
       ]),
     );
   }

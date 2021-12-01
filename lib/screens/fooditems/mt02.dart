@@ -14,7 +14,7 @@ class _MT02 extends State<MT02> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Original Pearl Milk Tea - R"),
+          title: Text("Original Pearl Milk Tea"),
         ),
         body: Body());
   }
@@ -76,7 +76,9 @@ class Body extends StatelessWidget {
                 "deliverdeli",
                 "grabl",
                 "foodpandal",
-                "deliverl"))
+                "deliverl",
+                "foodname",
+                "image"))
       ]),
     );
   }

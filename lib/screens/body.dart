@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_app/components/foodoption.dart';
 import 'package:food_app/screens/Offer/delivereatoffer.dart';
 import 'package:food_app/screens/Restaurant/DrinksRes/Starbucks.dart';
@@ -134,6 +135,13 @@ class _BodyState extends State<Body> {
                       child: Foodoption("assets/images/drinks.jpg", "Drinks")),
                   GestureDetector(
                       onTap: () {
+                        Fluttertoast.showToast(
+                            msg: "This is Center Short Toast",
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.CENTER,
+                            backgroundColor: Colors.red,
+                            textColor: Colors.white,
+                            fontSize: 16.0);
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => Desserts()),

@@ -1,15 +1,16 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class GetPrice extends StatefulWidget {
   int documents;
-  late String option, option2, option3, deli, deli2, deli3, foodname;
+  late String option, option2, option3, deli, deli2, deli3, foodname, picture;
 
   GetPrice(this.documents, this.option, this.option2, this.option3, this.deli,
-      this.deli2, this.deli3, this.foodname);
+      this.deli2, this.deli3, this.foodname, this.picture);
 
   @override
   State<GetPrice> createState() => _GetPriceState();
@@ -36,7 +37,8 @@ class _GetPriceState extends State<GetPrice> {
         company = "",
         company2 = "",
         company3 = "",
-        name = "";
+        name = "",
+        picturee = "";
 
     return Container(
       child: StreamBuilder<QuerySnapshot>(
@@ -69,6 +71,7 @@ class _GetPriceState extends State<GetPrice> {
                     '${data.docs[widget.documents][widget.deli2]}');
                 delivalue3 = double.parse(
                     '${data.docs[widget.documents][widget.deli3]}');
+                picturee = data.docs[widget.documents][widget.picture];
 
                 if (value > value2) {
                   if (value > value3) {
@@ -314,7 +317,7 @@ class _GetPriceState extends State<GetPrice> {
                         "DeliCompany": '$company',
                         "Price": '$first',
                         "Delivery": '$delivery',
-                        "Image": '$image',
+                        "Image": '$picturee',
                       })
                       .then((value) => print("User Added"))
                       .catchError(
@@ -338,7 +341,7 @@ class _GetPriceState extends State<GetPrice> {
                         "DeliCompany": '$company2',
                         "Price": '$second',
                         "Delivery": '$delivery2',
-                        "Image": '$image2'
+                        "Image": '$picturee'
                       })
                       .then((value) => print("User Added"))
                       .catchError(
@@ -355,18 +358,21 @@ class _GetPriceState extends State<GetPrice> {
                 }
 
                 Future<void> addFavourite3() async {
-                  return favourite
-                      .doc("$name" + "3")
-                      .set({
-                        "foodName": '$name',
-                        "DeliCompany": '$company3',
-                        "Price": '$third',
-                        "Delivery": '$delivery3',
-                        "Image": '$image3'
-                      })
-                      .then((value) => print("User Added"))
-                      .catchError(
-                          (error) => print("Failed to add user: $error"));
+                  if (third == "0.00") {
+                  } else {
+                    return favourite
+                        .doc("$name" + "3")
+                        .set({
+                          "foodName": '$name',
+                          "DeliCompany": '$company3',
+                          "Price": '$third',
+                          "Delivery": '$delivery3',
+                          "Image": '$picturee'
+                        })
+                        .then((value) => print("User Added"))
+                        .catchError(
+                            (error) => print("Failed to add user: $error"));
+                  }
                 }
 
                 Future<void> removeFavourite3() async {
@@ -451,9 +457,8 @@ class _GetPriceState extends State<GetPrice> {
                                         icon: Icon(_isLiked
                                             ? Icons.favorite
                                             : Icons.favorite_outline),
-                                        color: _isLiked
-                                            ? Colors.red
-                                            : Colors.black,
+                                        color:
+                                            _isLiked ? Colors.red : Colors.blue,
                                         onPressed: () {
                                           if (_isLiked == false) {
                                             addFavourite();
@@ -480,7 +485,7 @@ class _GetPriceState extends State<GetPrice> {
                                     Text("Add to Favourite",
                                         style: GoogleFonts.montserrat(
                                           textStyle: TextStyle(
-                                              color: Colors.black,
+                                              color: Colors.blue,
                                               fontSize: 12,
                                               fontWeight: FontWeight.bold),
                                         )),
@@ -569,12 +574,13 @@ class _GetPriceState extends State<GetPrice> {
                                             : Icons.favorite_outline),
                                         color: _isLiked2
                                             ? Colors.red
-                                            : Colors.black,
+                                            : Colors.blue,
                                         onPressed: () {
                                           if (_isLiked2 == false) {
                                             addFavourite2();
                                             setState(() {
                                               _isLiked2 = !_isLiked2;
+
                                               ScaffoldMessenger.of(context)
                                                   .showSnackBar(SnackBar(
                                                       content: Text(
@@ -596,7 +602,7 @@ class _GetPriceState extends State<GetPrice> {
                                     Text("Add to Favourite",
                                         style: GoogleFonts.montserrat(
                                           textStyle: TextStyle(
-                                              color: Colors.black,
+                                              color: Colors.blue,
                                               fontSize: 12,
                                               fontWeight: FontWeight.bold),
                                         )),
@@ -685,16 +691,23 @@ class _GetPriceState extends State<GetPrice> {
                                             : Icons.favorite_outline),
                                         color: _isLiked3
                                             ? Colors.red
-                                            : Colors.black,
+                                            : Colors.blue,
                                         onPressed: () {
                                           if (_isLiked3 == false) {
                                             addFavourite3();
                                             setState(() {
                                               _isLiked3 = !_isLiked3;
-                                              ScaffoldMessenger.of(context)
-                                                  .showSnackBar(SnackBar(
-                                                      content: Text(
-                                                          "Added to favourites!")));
+                                              if (third == "0.00") {
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(SnackBar(
+                                                        content: Text(
+                                                            "Food option not available")));
+                                              } else {
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(SnackBar(
+                                                        content: Text(
+                                                            "Added to favourites!")));
+                                              }
                                             });
                                           } else {
                                             removeFavourite3();
@@ -712,7 +725,7 @@ class _GetPriceState extends State<GetPrice> {
                                     Text("Add to Favourite",
                                         style: GoogleFonts.montserrat(
                                           textStyle: TextStyle(
-                                              color: Colors.black,
+                                              color: Colors.blue,
                                               fontSize: 12,
                                               fontWeight: FontWeight.bold),
                                         )),

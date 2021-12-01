@@ -65,7 +65,7 @@ class Body extends StatelessWidget {
             ),
           ]),
           GetPrice(6, "grabMcC", "pandaMcC", "deliverMcC", "grabdeli",
-              "pandadeli", "eatdeli", "foodname"),
+              "pandadeli", "eatdeli", "foodname", "image"),
         ],
       ),
     );
