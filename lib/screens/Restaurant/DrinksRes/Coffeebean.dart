@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/components/ratingres/ratingviewcb.dart';
 import 'package:food_app/screens/fooditems/caramellatte.dart';
 import 'package:food_app/screens/fooditems/mocha.dart';
 import 'package:food_app/screens/fooditems/vanillacookie.dart';
@@ -81,6 +82,34 @@ class Coffeebean extends StatelessWidget {
                         Navigator.pop(context);
                       },
                     ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        alignment: Alignment.topRight,
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.reviews,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {
+                            openRatingDialog(context);
+                          },
+                        ),
+                      ),
+                      Container(
+                          margin: EdgeInsets.only(right: 10),
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            "Rate us!",
+                            style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                    color: Colors.black87,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold)),
+                          )),
+                    ],
                   ),
                 ],
               ),
@@ -258,5 +287,15 @@ class Coffeebean extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  openRatingDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            child: RatingViewCB(),
+          );
+        });
   }
 }

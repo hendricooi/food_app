@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:food_app/components/foodoption.dart';
@@ -61,6 +62,23 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
+    String top1 = "";
+
+    Future<List> countdoc() async {
+      List<int> sort = [];
+      var ratingkfc =
+          await FirebaseFirestore.instance.collection("ratingKFC").get();
+      var kfclength = await ratingkfc.docs.length;
+
+      var rating = await FirebaseFirestore.instance.collection("rating").get();
+      var ratinglength = await rating.docs.length;
+
+      sort.add(ratinglength);
+      sort.add(kfclength);
+      sort.sort();
+      return await sort;
+    }
+
     return SingleChildScrollView(
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -135,13 +153,6 @@ class _BodyState extends State<Body> {
                       child: Foodoption("assets/images/drinks.jpg", "Drinks")),
                   GestureDetector(
                       onTap: () {
-                        Fluttertoast.showToast(
-                            msg: "This is Center Short Toast",
-                            toastLength: Toast.LENGTH_SHORT,
-                            gravity: ToastGravity.CENTER,
-                            backgroundColor: Colors.red,
-                            textColor: Colors.white,
-                            fontSize: 16.0);
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => Desserts()),
@@ -271,6 +282,7 @@ class _BodyState extends State<Body> {
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     )))),
+
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -381,10 +393,11 @@ class _BodyState extends State<Body> {
                 )
               ]),
             ),
+
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("McDonald's",
+                Text("McDonalds",
                     style: GoogleFonts.montserrat(
                       textStyle: TextStyle(
                           color: Colors.black,

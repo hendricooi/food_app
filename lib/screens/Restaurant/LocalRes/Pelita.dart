@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/components/ratingres/ratingviewpelita.dart';
 import 'package:food_app/screens/fooditems/bawang.dart';
 import 'package:food_app/screens/fooditems/canai.dart';
 import 'package:food_app/screens/fooditems/telur.dart';
@@ -68,7 +69,7 @@ class Pelita extends StatelessWidget {
                           )),
                           textAlign: TextAlign.center,
                         ),
-                      )
+                      ),
                     ],
                   ),
                   Container(
@@ -82,6 +83,34 @@ class Pelita extends StatelessWidget {
                         Navigator.pop(context);
                       },
                     ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        alignment: Alignment.topRight,
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.reviews,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {
+                            openRatingDialog(context);
+                          },
+                        ),
+                      ),
+                      Container(
+                          margin: EdgeInsets.only(right: 10),
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            "Rate us!",
+                            style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                    color: Colors.black87,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold)),
+                          )),
+                    ],
                   ),
                 ],
               ),
@@ -241,5 +270,15 @@ class Pelita extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  openRatingDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            child: RatingViewpelita(),
+          );
+        });
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/components/ratingres/ratingview7.dart';
 import 'package:food_app/screens/fooditems/guotiao.dart';
 import 'package:food_app/screens/fooditems/penang.dart';
 import 'package:food_app/screens/fooditems/premium.dart';
@@ -80,6 +81,34 @@ class Village extends StatelessWidget {
                         Navigator.pop(context);
                       },
                     ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        alignment: Alignment.topRight,
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.reviews,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {
+                            openRatingDialog(context);
+                          },
+                        ),
+                      ),
+                      Container(
+                          margin: EdgeInsets.only(right: 10),
+                          alignment: Alignment.topRight,
+                          child: Text(
+                            "Rate us!",
+                            style: GoogleFonts.montserrat(
+                                textStyle: TextStyle(
+                                    color: Colors.black87,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold)),
+                          )),
+                    ],
                   ),
                 ],
               ),
@@ -257,5 +286,15 @@ class Village extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  openRatingDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return Dialog(
+            child: RatingView7(),
+          );
+        });
   }
 }

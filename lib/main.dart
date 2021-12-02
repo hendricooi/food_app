@@ -30,6 +30,10 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Food App',
         theme: ThemeData(
+            dialogTheme: DialogTheme(
+                backgroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(24))),
             primaryColor: kPrimaryColor,
             scaffoldBackgroundColor: Colors.white,
             textTheme: TextTheme(
